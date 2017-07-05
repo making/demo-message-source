@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<style>
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+</style>
+<body>
+
+<ul>
+    <li><a href="?locale=ja">🇯🇵</a></li>
+    <li><a href="?locale=en">🇬🇧</a></li>
+    <li><a href="?locale=zh">🇨🇳</a></li>
+    <li><a href="?locale=fr">🇫🇷</a></li>
+    <li><a href="?locale=de">🇩🇪</a> (fallback)</li>
+</ul>
+<table border="1">
+    <tr>
+        <th>Code</th>
+        <th>Message</th>
+    </tr>
+    <tr>
+        <td><code>hello</code></td>
+        <td th:text="#{hello}"></td>
+    </tr>
+    <tr>
+        <td><code>world</code></td>
+        <td th:text="#{world}"></td>
+    </tr>
+    <tr>
+        <td><code>foo</code> (fallback)</td>
+        <td th:text="#{foo}"></td>
+    </tr>
+</table>
+</body>
+</html>
